@@ -1,0 +1,4 @@
+#cloud-config
+runcmd:
+  - 'export PUBLIC_IPV4=$(curl ifconfig.me)'
+  - 'echo Instance: $(hostname), IP Address: $PUBLIC_IPV4 > /var/www/html/index.html'
